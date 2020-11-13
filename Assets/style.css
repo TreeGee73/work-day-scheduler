@@ -69,3 +69,11 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
+
+.footer-blue {
+  width: 100%;
+  text-align: center;
+  padding-bottom: .25rem;
+  background-color: #7a99c4;
+  color: #5d87c4;
+}
