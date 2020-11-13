@@ -1,5 +1,10 @@
-// Variables
+// Create an hourly planner that will allow the user to store events at each hour
+// Create hourly list (6am - 6pm)
+// Create event recording text area for each hour
+// Create a save button for each event to write it to local storage
+// Utilize an API to high light each event during the hour it occurs by changing the color
 
+// Variables
 const hour1 = $('#time1').text();
 const hour2 = $('#time2').text();
 const hour3 = $('#time3').text();
@@ -14,8 +19,3 @@ const hour11 = $('#time11').text();
 const hour12 = $('#time12').text();
 
 
-// Create an hourly planner that will allow the user to store events at each hour
-// Create hourly list (6am - 6pm)
-// Create event recording text area for each hour
-// Create a save button for each event to write it to local storage
-// Utilize an API to high light each event during the hour it occurs
