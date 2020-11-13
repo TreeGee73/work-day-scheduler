@@ -5,17 +5,18 @@
 // Utilize an API to high light each event during the hour it occurs by changing the color
 
 // Variables
-const hour1 = $('#time1').text();
-const hour2 = $('#time2').text();
-const hour3 = $('#time3').text();
-const hour4 = $('#time4').text();
-const hour5 = $('#time5').text();
-const hour6 = $('#time6').text();
-const hour7 = $('#time7').text();
-const hour8 = $('#time8').text();
-const hour9 = $('#time9').text();
+const hour01 = $('#time01').text();
+const hour02 = $('#time02').text();
+const hour03 = $('#time03').text();
+const hour04 = $('#time04').text();
+const hour05 = $('#time05').text();
+const hour06 = $('#time06').text();
+const hour07 = $('#time07').text();
+const hour08 = $('#time08').text();
+const hour09 = $('#time09').text();
 const hour10 = $('#time10').text();
 const hour11 = $('#time11').text();
 const hour12 = $('#time12').text();
+const hour13 = $('#time13').text();
 
 
