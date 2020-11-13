@@ -60,4 +60,4 @@ Luxon.js can be downloaded at https://moment.github.io/luxon/index.html
 ## Challenges
 
 ## Credits
-Background image is a free to use image that was obtained from Pexels.com.
+Background image is a free to use image that was obtained from <a href="http://www.pexels.com">Pexels.com</a>.
