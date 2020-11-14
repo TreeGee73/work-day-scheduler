@@ -10,11 +10,11 @@ SO THAT I can manage my time effectively
 
 GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
-[] the current day is displayed at the top of the calendar
+[x] the current day is displayed at the top of the calendar
 WHEN I scroll down
 [x] I am presented with time blocks for standard business hours
 WHEN I view the time blocks for that day
-[] each time block is color-coded to indicate whether it is in the past, present, or future
+[x] each time block is color-coded to indicate whether it is in the past, present, or future
 WHEN I click into a time block
 [x] I can enter an event
 WHEN I click the save button for that time block
