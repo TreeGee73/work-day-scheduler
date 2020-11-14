@@ -1,6 +1,6 @@
 # Work Day Scheduler
 
-The purpose of this project is to create a single day planner. The interface will display the hours of the day, have content boxes the user can record events for each hour, and will highlight the a time slot based on the current time. It utilizes Luxon to manage the dates and times.
+The purpose of this project is to create a single day planner. The interface will display the hours of the day, have content boxes the user can record events for each hour, and will highlight the a time slot based on the current time. It utilizes moment.js to manage the dates and times.
 
 ## Motivation / Project Criteria
 
@@ -12,15 +12,15 @@ GIVEN I am using a daily planner to create a schedule
 WHEN I open the planner
 [] the current day is displayed at the top of the calendar
 WHEN I scroll down
-[] I am presented with time blocks for standard business hours
+[x] I am presented with time blocks for standard business hours
 WHEN I view the time blocks for that day
 [] each time block is color-coded to indicate whether it is in the past, present, or future
 WHEN I click into a time block
-[] I can enter an event
+[x] I can enter an event
 WHEN I click the save button for that time block
-[] the text for that event is saved in local storage
+[x] the text for that event is saved in local storage
 WHEN I refresh the page
-[] the saved events persist
+[x] the saved events persist
 
 ## Approach
 
@@ -38,26 +38,21 @@ When they click on "Save" the entry is committed to local storage and saved in t
 
 <p><img src="assets/local_storage.jpg" alt="Entry Committed to Local Storage" title="Entry Committed to Local Storage"></p>
 
+Before the start of the day all entries are blue.
+
 <p><img src="assets/on_screen.jpg" alt="Entry Saved on Screen" title="Entry Saved on Screen"></p>
 
-Before the start of the day all entries are ~~blue~~.
-
-<p><img src="assets/before_start.jpg" alt="Before the Schedule Starts" title="Before the Schedule Starts"></p>
-
-As the day progresses; the current hour is highlighted with ~~green~~, the previous hours/past timeslots become ~~dark gray~~, while the upcoming hours/timeslots remain ~~blue~~.
+As the day progresses; the current hour is highlighted with green, the previous hours/past timeslots become dark blue and the text (if any) get's struck through, while the upcoming hours/timeslots remain blue.
 
 <p><img src="assets/highlighted_hour.jpg" alt="Day in Progress" title="Day in Progress"></p>
 
- When all of the displayed hours / timeslots have passed the day all hours/timeslots will display ~~dark gray~~
+ When all of the displayed hours / timeslots have passed the day all hours/timeslots will display dark blue.
 
 <p><img src="assets/day_complete.jpg" alt="After the Day Ends" title="After the Day Ends"></p>
 
 ## Link
 
-This app can be accessed at https://treegee73.github.io/code-quiz/
-Luxon.js can be downloaded at https://moment.github.io/luxon/index.html
+This app can be accessed at https://treegee73.github.io/work-day-scheduler/
 
 ## Challenges
-
-## Credits
-Background image is a free to use image that was obtained from <a href="http://www.pexels.com">Pexels.com</a>.
+Attempted to use Luxon.js to manage date time because it was recommended on the moment.js website. Though I read through all of the documentation thoroughly, I became confused by the amount of information presented. Where moment.js provided very upfront and easy to follow usage, Luxon provided a wealth of data. With more time to complete the assignment, I am confident I can impliment the Luxon.js. I will continue to work on the development of this and update the time management script from moment.js. to Luxon.js in a future refactoring.

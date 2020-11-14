@@ -1,8 +1,5 @@
-// Create an hourly planner that will allow the user to store events at each hour
-// Utilize an API to high light each event during the hour it occurs by changing the color
-
-// Create hourly list (6am - 6pm)
-// Variables
+// ---- Planner Variables ---- //
+// Time Slot Variables
 const hour01 = $('#time01').text();
 const hour02 = $('#time02').text();
 const hour03 = $('#time03').text();
@@ -13,13 +10,13 @@ const hour07 = $('#time07').text();
 const hour08 = $('#time08').text();
 const hour09 = $('#time09').text();
 const hour10 = $('#time10').text();
-const hour11 = $('#time11').text();
-const hour12 = $('#time12').text();
-const hour13 = $('#time13').text();
+
+
+
 
 // Record event data to local storage
 // If a save button is clicked
-$('.saveBtn').on('click', function () {
+$('#btn01').on('click', function () {
     // Determine if text box is empty
     if ($('#text01').val()) {
         // Clear local storage if text box is empty
@@ -35,9 +32,8 @@ $('.saveBtn').on('click', function () {
 });
 
 // Repeat for remaining hours on planner
-// To be futher condensed for dryer code upon
-// complete functionality build.
-$('.saveBtn').on('click', function () {
+// To be refactored to reduce repetition if possible
+$('#btn02').on('click', function () {
     if ($('#text02').val()) {
         localStorage.removeItem('text02');
     }
@@ -47,7 +43,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour02, $('#text02').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn03').on('click', function () {
     if ($('#text03').val()) {
         localStorage.removeItem('text03');
     }
@@ -57,7 +53,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour03, $('#text03').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn04').on('click', function () {
     if ($('#text04').val()) {
         localStorage.removeItem('text04');
     }
@@ -67,7 +63,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour04, $('#text04').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn05').on('click', function () {
     if ($('#text05').val()) {
         localStorage.removeItem('text05');
     }
@@ -77,7 +73,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour05, $('#text05').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn06').on('click', function () {
     if ($('#text06').val()) {
         localStorage.removeItem('text06');
     }
@@ -87,7 +83,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour06, $('#text06').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn07').on('click', function () {
     if ($('#text07').val()) {
         localStorage.removeItem('text07');
     }
@@ -97,7 +93,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour07, $('#text07').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn08').on('click', function () {
     if ($('#text08').val()) {
         localStorage.removeItem('text08');
     }
@@ -107,7 +103,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour08, $('#text08').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn09').on('click', function () {
     if ($('#text09').val()) {
         localStorage.removeItem('text09');
     }
@@ -117,7 +113,7 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour09, $('#text09').val());
 });
 
-$('.saveBtn').on('click', function () {
+$('#btn10').on('click', function () {
     if ($('#text10').val()) {
         localStorage.removeItem('text10');
     }
@@ -127,32 +123,73 @@ $('.saveBtn').on('click', function () {
     localStorage.setItem(hour10, $('#text10').val());
 });
 
-$('.saveBtn').on('click', function () {
-    if ($('#text11').val()) {
-        localStorage.removeItem('text11');
-    }
+// --- TIME MANAGEMENT --- //
 
-    const hourEleven = JSON.stringify(hour11);
+// Date Time Variables
 
-    localStorage.setItem(hour11, $('#text11').val());
-});
+let todaysDate = moment().format('dddd, MMMM Do YYYY');
+let currentTime = moment().format('LT');
+let currentTime24 = parseInt(moment().format('HH'));
+let currentTimeInt = parseInt(currentTime);
+let eventTimer;
 
-$('.saveBtn').on('click', function () {
-    if ($('#text12').val()) {
-        localStorage.removeItem('text12');
-    }
+// Additional Time Slot Variables for time comparison and color application
+const hour01Int = parseInt(hour01);
+const hour02Int = parseInt(hour02);
+const hour03Int = parseInt(hour03);
+const hour04Int = parseInt(hour04);
+const hour05Int = parseInt(hour05);
+const hour06Int = parseInt(hour06);
+const hour07Int = parseInt(hour07);
+const hour08Int = parseInt(hour08);
+const hour09Int = parseInt(hour09);
+const hour10Int = parseInt(hour10);
 
-    const hourTwelve = JSON.stringify(hour12);
 
-    localStorage.setItem(hour12, $('#text12').val());
-});
+// Display the time using moment.js
 
-$('.saveBtn').on('click', function () {
-    if ($('#text13').val()) {
-        localStorage.removeItem('text13');
-    }
+$('#currentDay').append(todaysDate);
 
-    const hourThirteen = JSON.stringify(hour13);
+// Apply color to time slot to indicate if the
+// hour has past, is current, or coming up
 
-    localStorage.setItem(hour13, $('#text13').val());
-});
+eventHightlight();
+
+function eventHightlight() {
+    eventTimer = setInterval(eventHightlight, 1000);
+
+    // Determine if the current time is within the planner's time span (8am - 5pm/17)
+    if (currentTime24 >= 8 && currentTime24 <= 17) {
+        // For the 10 hours available in the planner
+        for (let i = 1; i <= 10; i++) {
+            // Variable for the conversion of the time into a interger
+            let currentHrInt = parseInt($('#time'+i).text());
+            
+            // If the current hour interger is less then 10 add 12
+            if (currentHrInt < 10) {
+                currentHrInt = currentHrInt + 12;
+            };
+            // If the current hour interger is about equal to the current time
+            if (currentHrInt == currentTime24) {
+                // Add the class of present to the schedule text box
+                $('#text'+i).addClass('present');
+                continue;
+            }
+            
+            // If the current hour interger in less than the current time
+            if (currentHrInt < currentTime24) {
+                // Add the class of future to the schedule text box
+                $('#text'+i).addClass('future');
+                
+                // Else add the class of present to the schedule text box
+            } else {
+                $('#text'+i).addClass('present');
+            };
+        };
+
+        // Else clear the interval and add the class of past to the schedule text box
+    } else {
+        clearInterval(eventTimer);
+        $('textarea').addClass('past');
+    };
+};
