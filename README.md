@@ -26,7 +26,7 @@ WHEN I refresh the page
 
 To complete the project, exisiting HTML and CSS files were manipulated and a new JavaScript file was created. This interface is formatted using a combination of Bootstrap and custom CSS to give a polished look and feel that remained user friendly. The interface is powered by JavaScript with Luxon.js handling the date & time management.
 
-The user is presented with a screen that displays the day and has a list of hours from 6 am to 6 pm presented for the purpose of recording events, appointments, reminders, etc.
+The user is presented with a screen that displays the day and has a list of hours from 8am to 5pm presented for the purpose of recording events, appointments, reminders, etc.
 
 <p><img src="assets/interface_at_open.jpg" alt="Blank Planner Screen" title="Blank Planner Screen"></p>
 
