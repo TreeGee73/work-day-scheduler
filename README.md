@@ -28,27 +28,27 @@ To complete the project, exisiting HTML and CSS files were manipulated and a new
 
 The user is presented with a screen that displays the day and has a list of hours from 8am to 5pm presented for the purpose of recording events, appointments, reminders, etc.
 
-<p><img src="assets/interface_at_open.jpg" alt="Blank Planner Screen" title="Blank Planner Screen"></p>
+<p><img src="assets/images/interface_at_open.jpg" alt="Blank Planner Screen" title="Blank Planner Screen"></p>
 
 When the user clicks on a field next to the time, they can enter in their event, appointment, reminder, or other comment. 
 
-<p><img src="assets/interface_entry.jpg" alt="User Entry" title="User Entry"></p>
+<p><img src="assets/images/interface_entry.jpg" alt="User Entry" title="User Entry"></p>
 
 When they click on "Save" the entry is committed to local storage and saved in the selected timeslot on the screen.
 
-<p><img src="assets/local_storage.jpg" alt="Entry Committed to Local Storage" title="Entry Committed to Local Storage"></p>
+<p><img src="assets/images/local_storage.jpg" alt="Entry Committed to Local Storage" title="Entry Committed to Local Storage"></p>
 
 Before the start of the day all entries are blue.
 
-<p><img src="assets/on_screen.jpg" alt="Entry Saved on Screen" title="Entry Saved on Screen"></p>
+<p><img src="assets/images/on_screen.jpg" alt="Entry Saved on Screen" title="Entry Saved on Screen"></p>
 
 As the day progresses; the current hour is highlighted with green, the previous hours/past timeslots become dark blue and the text (if any) get's struck through, while the upcoming hours/timeslots remain blue.
 
-<p><img src="assets/highlighted_hour.jpg" alt="Day in Progress" title="Day in Progress"></p>
+<p><img src="assets/images/highlighted_hour.jpg" alt="Day in Progress" title="Day in Progress"></p>
 
  When all of the displayed hours / timeslots have passed the day all hours/timeslots will display dark blue.
 
-<p><img src="assets/day_complete.jpg" alt="After the Day Ends" title="After the Day Ends"></p>
+<p><img src="assets/images/day_complete.jpg" alt="After the Day Ends" title="After the Day Ends"></p>
 
 ## Link
 
