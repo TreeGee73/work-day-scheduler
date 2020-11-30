@@ -50,9 +50,19 @@ As the day progresses; the current hour is highlighted with green, the previous 
 
 <p><img src="assets/images/day_complete.jpg" alt="After the Day Ends" title="After the Day Ends"></p>
 
+## Challenges
+
+Attempted to use Luxon.js to manage date time because it was recommended on the moment.js website. Though I read through all of the documentation thoroughly, I became confused by the amount of information presented. Where moment.js provided very upfront and easy to follow usage, Luxon provided a wealth of data. With more time to complete the assignment, I am confident I can impliment the Luxon.js. I will continue to work on the development of this and update the time management script from moment.js. to Luxon.js in a future refactoring.
+
+## Technology
+
+CSS Framework: [Bootstrap](https://getbootstrap.com/)
+Bootstrap Depends on [JQuery](https://jquery.com/) and [JavaScript](https://www.javascript.com/) so these are also implimented on this site.
+Time Management: [moment.js](https://momentjs.com/)
+
 ## Link
 
-This app can be accessed at https://treegee73.github.io/work-day-scheduler/
+This app can be accessed at [work-day-scheduler](https://treegee73.github.io/work-day-scheduler/)
 
-## Challenges
-Attempted to use Luxon.js to manage date time because it was recommended on the moment.js website. Though I read through all of the documentation thoroughly, I became confused by the amount of information presented. Where moment.js provided very upfront and easy to follow usage, Luxon provided a wealth of data. With more time to complete the assignment, I am confident I can impliment the Luxon.js. I will continue to work on the development of this and update the time management script from moment.js. to Luxon.js in a future refactoring.
+## Contact
+Contact me at [treegee73@gmail.com](mailto:treegee73@gmail.com)
